@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgb(153, 130, 238);
+        }
+
+        .card-container{
+            position: relative;
+            padding: 40px;
+            width: 320px;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .card-container::before {
+                content: " ";
+                position: absolute;
+                left: 0;
+                bottom: calc(-100% + 5px); 
+                width: 100%;
+                height: 100%;
+                background-color: darkgoldenrod;
+                z-index: 1;
+                transition: bottom 1s;
+            }
+
+            .card-container:hover::before {
+                bottom: 0; 
+            }
+
+
+        .content{
+            position: relative;
+            color: #000;
+            z-index: 2;
+            transition: 1s;
+        }
+
+        h2{
+            font-size: 30px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        p{
+            padding: 20px 0;
+            margin: 20px 0;
+            text-align: center;
+            font-style: italic;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          
+        }
+
+        a{
+            color: white;
+            background-color: crimson;
+            padding: 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .card-container:hover .container{
+            color:#fff
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <section class="content">
+            <h2>Bhanu</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste, autem totam quod officia animi maxime tenetur earum magnam impedit eos iure! Pariatur ab error voluptatem incidunt eum voluptatibus in!</p>
+            <a href="">ReadMore</a>
+        </section>
+    </div>
+</body>
+</html>
